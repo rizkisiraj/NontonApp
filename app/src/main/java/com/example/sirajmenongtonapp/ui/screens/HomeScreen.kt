@@ -46,8 +46,8 @@ fun HomeScreen(modifier: Modifier = Modifier) {
                         .size(100.dp)
                         .clip(CircleShape)
                         .border(
-                            BorderStroke(4.dp, Color.White), // Add border
-                            shape = CircleShape // Match the shape of the border to the clip shape
+                            BorderStroke(4.dp, Color.White),
+                            shape = CircleShape
                         )
                 )
             }
