@@ -1,6 +1,6 @@
 # 📱 SirajMenongtonApp
 
-![Sad Hanni]([https://via.placeholder.com/150](https://i.pinimg.com/originals/2a/8c/50/2a8c5080750f55803766f3e655bef4a3.jpg)) 
+![Sad Hanni](https://i.pinimg.com/originals/2a/8c/50/2a8c5080750f55803766f3e655bef4a3.jpg) 
 
 ## 📝 Table of Contents
 - [About](#about)
@@ -17,20 +17,12 @@
 ---
 
 ## 🛠️ About
-**My Android App** is a [brief description of your app]. It helps users to [mention the main purpose or functionality of your app].
-
-### Demo
-- [Download APK](#) <!-- Link to your APK if hosted somewhere -->
-- [Watch Demo Video](#) <!-- Link to a demo video if available -->
+**SirajMenongtonApp** is a movie app that shows list of movies with instagram-like user interface.
 
 ---
 
 ## ✨ Features
-- 🌟 Feature 1
-- 🔍 Feature 2
-- 💬 Feature 3
-- 🔔 Feature 4
-- 🛠️ Feature 5
+- 🌟 Navigate through a list of movies
 
 ---
 
