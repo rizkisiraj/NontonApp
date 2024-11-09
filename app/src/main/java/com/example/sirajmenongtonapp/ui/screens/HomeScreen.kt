@@ -19,16 +19,18 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.sirajmenongtonapp.R
 import com.example.sirajmenongtonapp.data.models.movies
 import com.example.sirajmenongtonapp.ui.components.MovieCard
 
 @Composable
-fun HomeScreen(modifier: Modifier = Modifier) {
+fun HomeScreen(modifier: Modifier = Modifier, navController: NavController) {
     Column(
-        modifier
+        Modifier
             .fillMaxSize()
             .padding(16.dp)
+            .padding(top = 20.dp)
     ) {
         Text(
             "Story",
@@ -66,7 +68,9 @@ fun HomeScreen(modifier: Modifier = Modifier) {
                 Spacer(modifier = Modifier.height(44.dp))
             }
             items(movies) { movie ->
-                MovieCard(movie)
+                MovieCard(movie, onClick = {
+                    navController.navigate("movie/${movie.title}")
+                })
                 Spacer(modifier = Modifier.height(44.dp))
             }
         }

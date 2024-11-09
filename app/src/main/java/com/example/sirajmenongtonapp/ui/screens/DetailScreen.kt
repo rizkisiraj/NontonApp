@@ -18,21 +18,23 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.sirajmenongtonapp.R
+import com.example.sirajmenongtonapp.data.models.Movie
+import com.example.sirajmenongtonapp.data.models.movies
 
 @Preview(showBackground = true)
 @Composable
-fun DetailScreen() {
+fun DetailScreen(movie: Movie = movies[0], modifier: Modifier = Modifier) {
     val scrollState = rememberScrollState()
 
     Box(
-        modifier = Modifier.fillMaxSize(),
+        modifier = modifier.fillMaxSize(),
         contentAlignment = Alignment.TopCenter
     ) {
         Column(
           modifier = Modifier.fillMaxSize()
         ) {
             Image(
-                painterResource(R.drawable.poster1),
+                painterResource(movie.image),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
@@ -65,7 +67,7 @@ fun DetailScreen() {
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text(
-                        "Movie",
+                        "${movie.title}",
                         style = MaterialTheme.typography.displaySmall,
                         fontWeight = FontWeight.Bold
                     )
@@ -95,7 +97,7 @@ fun DetailScreen() {
                     }
                 }
                 Text(
-                    "9.1",
+                    "${movie.rating}",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
                 )

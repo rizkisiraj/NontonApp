@@ -31,7 +31,7 @@ sealed class BottomNavScreen(
         unselectedIcon = Icons.Outlined.Favorite
     )
 
-    object Setting: BottomNavScreen(
+    object About: BottomNavScreen(
         route = "about",
         title = "About",
         selectedIcon = Icons.Filled.Person,

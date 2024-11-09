@@ -21,9 +21,9 @@ import com.example.sirajmenongtonapp.R
 
 @Preview(showBackground = true)
 @Composable
-fun AboutScreen() {
+fun AboutScreen(modifier: Modifier = Modifier) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
