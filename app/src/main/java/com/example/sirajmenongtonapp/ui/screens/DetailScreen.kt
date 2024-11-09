@@ -2,6 +2,8 @@ package com.example.sirajmenongtonapp.ui.screens
 
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -19,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.sirajmenongtonapp.R
 import com.example.sirajmenongtonapp.data.models.Movie
+import com.example.sirajmenongtonapp.data.models.actors
 import com.example.sirajmenongtonapp.data.models.movies
 
 @Preview(showBackground = true)
@@ -101,7 +104,7 @@ fun DetailScreen(movie: Movie = movies[0], modifier: Modifier = Modifier) {
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
                 )
-                Text("asdasdaskhdsa asdasdjaskdjksad asdlasjdlsajdlasjd alsdjsadjsaklsdklajklasjdklsa",
+                Text(movie.description,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
@@ -118,15 +121,14 @@ fun DetailScreen(movie: Movie = movies[0], modifier: Modifier = Modifier) {
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold
                 )
-                Row(
+                LazyRow(
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .horizontalScroll(scrollState),
+                        .fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
-                    repeat(5) {
+                    items(actors) { actor ->
                         Image(
-                            painterResource(R.drawable.poster1),
+                            painterResource(actor.image),
                             contentScale = ContentScale.Crop,
                             contentDescription = null,
                             modifier = Modifier
