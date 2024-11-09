@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.sirajmenongtonapp.ui.screens.CollectionScreen
 import com.example.sirajmenongtonapp.ui.screens.HomeScreen
 import com.example.sirajmenongtonapp.ui.theme.SirajMenongtonAppTheme
 
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             SirajMenongtonAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    HomeScreen(Modifier.padding(innerPadding))
+                    CollectionScreen()
                 }
             }
         }

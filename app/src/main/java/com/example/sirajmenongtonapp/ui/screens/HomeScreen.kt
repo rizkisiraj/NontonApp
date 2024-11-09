@@ -7,6 +7,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -19,6 +20,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.sirajmenongtonapp.R
+import com.example.sirajmenongtonapp.data.models.movies
 import com.example.sirajmenongtonapp.ui.components.MovieCard
 
 @Composable
@@ -63,8 +65,8 @@ fun HomeScreen(modifier: Modifier = Modifier) {
                 )
                 Spacer(modifier = Modifier.height(44.dp))
             }
-            items(5) {
-                MovieCard()
+            items(movies) { movie ->
+                MovieCard(movie)
                 Spacer(modifier = Modifier.height(44.dp))
             }
         }

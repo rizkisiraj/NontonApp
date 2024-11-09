@@ -131,8 +131,8 @@ fun DetailScreen() {
                                 .size(60.dp)
                                 .clip(CircleShape)
                                 .border(
-                                    BorderStroke(2.dp, Color.White), // Add border
-                                    shape = CircleShape // Match the shape of the border to the clip shape
+                                    BorderStroke(2.dp, Color.White),
+                                    shape = CircleShape
                                 )
                         )
                     }

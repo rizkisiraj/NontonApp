@@ -16,10 +16,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.sirajmenongtonapp.R
+import com.example.sirajmenongtonapp.data.models.Movie
 
-@Preview(showBackground = true)
 @Composable
-fun MovieCard() {
+fun MovieCard(movie: Movie) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -38,7 +38,7 @@ fun MovieCard() {
                     .offset(y = (-28).dp)// Enforce 9:16 aspect ratio
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.poster1), // Replace with your image resource
+                    painter = painterResource(id = movie.image), // Replace with your image resource
                     contentDescription = "Movie Poster",
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
@@ -51,13 +51,13 @@ fun MovieCard() {
 
             Column {
                 Text(
-                   "Title",
+                   movie.title,
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.SemiBold
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
-                    "Director: Andika",
+                    "Director: ${movie.director}",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -69,7 +69,7 @@ fun MovieCard() {
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
-                    "9.1",
+                    "${movie.rating}",
                     style = MaterialTheme.typography.titleLarge,
                     color = Color(0xFFF3C623),
                     fontWeight = FontWeight.SemiBold
